@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
 
   try {
     const products = await productManger.getProduct(queryList);
-    // res.status(200).send(products)
+    //res.status(200).send(products)
     res.send({ status: "success", products });
   } catch (err) {
     res.status(500).send(err.message);
